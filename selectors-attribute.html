@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Attribute Selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            //CONTAINS PREFIX
+            // $("a[hreflang|='en']").css('color', 'red');
+
+            //CONTAINS
+            // $("a[hreflang*='en']").css('color', 'red');
+
+            //CONTAINS WHOLE WORD
+            // $("a[hreflang~='en']").css('color', 'red');
+
+            //END WITH
+            // $("a[href$='html']").css('color', 'red');
+
+            //STARTS WITH
+            // $("a[href^='index']").css('color', 'red');
+
+
+        }); 
+    </script>
+</head>
+<body>
+    <a href="aboutus.html" hreflang="en" >Home (en-us)</a><br>
+    <a href="aboutus.html" hreflang="en-uk" >Home (en-uk)</a><br>
+     <a href="index.html" hreflang="enlish" >Home (en)</a>
+</body>
+</html>
