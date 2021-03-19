@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Form Selectors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(':text').css('background-color', 'silver');
+            $(':password').css('background-color', 'silver');
+            $(':submit').css('color', 'green');
+
+            //CHECKBOXES
+            // $(':checkbox').css('width', '20px').css('height', '20px');
+
+            //CHECKED CHECKBOXES
+            // $(':checkbox:checked:enabled').css('width', '20px').css('height', '20px');
+
+            //INPUT: NOT CHECKBOX
+            $(':input:not(:checkbox)').css('width', '20px').css('height', '20px');
+        });
+    </script>
+</head>
+<body>
+    <form>
+        Name:<br>
+        <input type="text" id="name"><br><br>
+        Password:<br>
+        <input type="password" id="name"><br><br>
+        Favorite Food:<br>
+        <input type="checkbox" id="italian" name="italian" value="Italian" checked>Italian<br>
+        <input type="checkbox" id="mexican" name="mexican" value="Mexican">Mexican<br>
+        <input type="checkbox" id="chinese" name="chinese" value="Chinese">Chinese<br>
+        <input type="checkbox" id="indian" name="indian" value="Indian">Indian<br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>
